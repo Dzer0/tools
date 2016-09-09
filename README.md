@@ -7,3 +7,7 @@
  - 使用django 读取mongodb数据 生成表格 在前端显示（未处理）
 ### 2016-9-10 添加了代码程序
  - 还在完成9-8日的第一点
+ - 9月8日的第一点还未完成，但是思路已经很清晰下面说下思路
+ 	· 通过http://url:port/api/v1.0/machine 获取宿主机的信息
+ 	· 通过http://url:port/api/v1.0/containers/docker/containers_id获取容器性能使用情况
+
