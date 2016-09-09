@@ -5,3 +5,5 @@
  - 读取cAdvisor的api获取docker的信息（在处理中）
  - 安装mongodb数据库，使用json格式存docker信息（未处理）
  - 使用django 读取mongodb数据 生成表格 在前端显示（未处理）
+### 2016-9-10 添加了代码程序 
+ - 还在完成9-8日的第一点
