@@ -18,7 +18,7 @@ def insert_mongodb_data(ip,port,user,pwd,databsename,collections,datas):
     db = client[databsename] # 切换数据库
     a = db.authenticate(user,pwd) # 登录数据库
     if a == True: # 判断是否登录成功
-        db.collection_names() # 显示所有集合
+        print db.collection_names() # 显示所有集合
         coll = db.containers_info # 选择集合   ####坑坑坑 不知道为啥不能引用？？艹
         print coll
         try:
