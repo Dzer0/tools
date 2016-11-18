@@ -1,4 +1,6 @@
 #!/bin/sh
+#  使用方法：第一步添加 节点 etcdctl mk /k8s.com/network/config '{"Network":"172.66.0.0/16"}'
+#　使用方法：sh flannled_install.sh http://etcd1_ip:prot,http://etcd2_ip:port,http://etcd3_ip:port /k8s.com/network
 # 检查etcd是否安装
 flanneld --version
 if [[ $? -eq 0 ]];

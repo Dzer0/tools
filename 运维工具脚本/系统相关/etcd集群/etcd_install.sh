@@ -1,4 +1,5 @@
 #!/bin/sh
+# 用法：sh filename nodename node1=http://ip:port,node2=http://ip:port,node3=http://ip:node
 # 检查etcd是否安装
 etcd --version
 if [[ $? -eq 0 ]];
