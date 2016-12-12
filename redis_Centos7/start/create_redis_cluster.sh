@@ -1,5 +1,6 @@
 #!/bin/sh
 if_name=eno16777736    #请输入网卡名
+cdir=`pwd`
 installd (){
     echo '由于没有安装相关依赖，程序正在自动安装 需要时间有点长，请耐心等待！！！'
     sleep 3
@@ -27,6 +28,11 @@ Dzer0 (){
     set -x
     chmod u+x ../redis3.0.7/redis-trib.rb
     ../redis3.0.7/redis-trib.rb create --replicas 1 $nodes
+    set +x
+    echo '设置开机启动.......'
+    set -x
+    chmod u+x /etc/rc.d/rc.local
+    echo "/bin/sh $cdir/start_host_redis.sh" >> /etc/rc.d/rc.local
     set +x
 }
 

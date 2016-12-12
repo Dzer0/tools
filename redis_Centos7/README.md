@@ -33,10 +33,12 @@ start      			各种启动脚本
 redis-3.0.7.gem 		创建集群需要的redis依赖
 ruby-2.2.5.tar.gz 		ruby安装，用于离线安装ruby
 rubygems-update-2.6.7.gem	rubygems离线安装包，用于离线安装
-start.sh 			汇总的一键启动脚本
+start.sh 			汇总的离线一键启动脚本(编译ruby较慢，在没网时使用)
+net_start.sh        网络安装脚本(速度较快有网推荐使用此脚本)
 
 start目录下
 create_redis_cluster.sh 	创建集群命令
 password.sh			一键设置集群密码，注意会导致集群重启，数据可能会丢失
 start_cluster.sh 		启动redis集群节点
 stop.sh				停止并删除创建的redis
+start_host_redis.sh  开机启动脚本
