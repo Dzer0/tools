@@ -7,7 +7,7 @@ if [[ $? -eq 0 ]];
         echo 'etcd 已经安装了,请检查!!!'
         exit
     else 
-        yum -y  install etcd
+        yum -y  install etcd net-tools
 fi
 
 # 获取本机ip地址
