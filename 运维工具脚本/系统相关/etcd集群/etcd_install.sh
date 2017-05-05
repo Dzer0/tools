@@ -1,5 +1,15 @@
 #!/bin/sh
 # 用法：sh filename nodename node1=http://ip:port,node2=http://ip:port,node3=http://ip:node
+# sh etcd_install.sh node1  node1=http://192.168.159.141:2380,node2=http://192.168.159.144:2380,node3=http://192.168.159.145:2380
+# sh etcd_install.sh node2  node1=http://192.168.159.141:2380,node2=http://192.168.159.144:2380,node3=http://192.168.159.145:2380
+# sh etcd_install.sh node3  node1=http://192.168.159.141:2380,node2=http://192.168.159.144:2380,node3=http://192.168.159.145:2380
+
+# etcdctl mk /k8s.com/network/config '{"Network":"172.66.0.0/16"}'
+
+# sh flannled_install_0.5.5.sh http://192.168.159.141:2379,http://192.168.159.144:2379,http://192.168.159.145:2379 /k8s.com/network
+
+# sh kubernetes_install.sh http://192.168.159.141:2379,http://192.168.159.144:2379,http://192.168.159.145:2379 http://192.168.159.141:8080
+
 # 检查etcd是否安装
 etcd --version
 if [[ $? -eq 0 ]];
